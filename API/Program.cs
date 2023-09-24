@@ -1,9 +1,11 @@
 using System.Net.Mime;
 using System.Text;
+using API.DbContext;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
@@ -47,6 +49,11 @@ namespace API
             {
                 options.Filters.Add(new ProducesAttribute(MediaTypeNames.Application.Json));
                 options.Filters.Add(new AuthorizeFilter());
+            });
+
+            builder.Services.AddDbContext<CustomerDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("CustomerDb"));
             });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
