@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using API.Repositories;
+using Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -8,10 +9,12 @@ namespace API.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ILogger<CustomerController> _logger;
+        private readonly ICustomerRepository _customerRepository;
 
-        public CustomerController(ILogger<CustomerController> logger)
+        public CustomerController(ILogger<CustomerController> logger, ICustomerRepository customerRepository)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _customerRepository = customerRepository ?? throw new ArgumentNullException(nameof(customerRepository));
         }
 
         [HttpGet]

@@ -1,6 +1,7 @@
 using System.Net.Mime;
 using System.Text;
 using API.DbContext;
+using API.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -82,6 +83,9 @@ namespace API
                     }
                 });
             });
+
+            builder.Services.AddScoped<ICustomerDbContext, CustomerDbContext>();
+            builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             var app = builder.Build();
 
