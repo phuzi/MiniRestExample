@@ -1,7 +1,9 @@
 using System.Net.Mime;
 using System.Text;
+using API.Configuration;
 using API.DbContext;
 using API.Repositories;
+using API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -84,8 +86,12 @@ namespace API
                 });
             });
 
+            builder.Services.AddScoped<IClientAuthenticationService, ClientAuthenticationService>();
             builder.Services.AddScoped<ICustomerDbContext, CustomerDbContext>();
             builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+            builder.Services.Configure<ApiCredentials>(builder.Configuration.GetSection("Credentials"));
+            builder.Services.Configure<JwtConfiguration>(builder.Configuration.GetSection("Jwt"));
 
             var app = builder.Build();
 
