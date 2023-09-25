@@ -18,15 +18,33 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public ActionResult Get([FromQuery] Guid customerRef)
+        public async Task<ActionResult> Get([FromQuery] Guid customerRef, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            if (customerRef == Guid.Empty)
+            {
+                return BadRequest($"{nameof(customerRef)} must not be empty.");
+            }
+
+            var customer = await _customerRepository.GetAsync(customerRef, cancellationToken);
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(customer);
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] Customer customer)
+        public async Task<ActionResult> Post([FromBody] Customer? customer, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            if (customer == null)
+            {
+                return BadRequest($"{nameof(customer)} must be specified.");
+            }
+
+            await _customerRepository.AddAsync(customer, cancellationToken);
+            return Ok();
         }
     }
 }
