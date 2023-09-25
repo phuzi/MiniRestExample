@@ -122,6 +122,39 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table9.AddRow(new string[] {
+                            "CustomerRef",
+                            "69141d84-f724-4350-b508-8530f54faf42"});
+                table9.AddRow(new string[] {
+                            "CustomerName",
+                            "Major Tom"});
+                table9.AddRow(new string[] {
+                            "AddressLine1",
+                            "Ground Control"});
+                table9.AddRow(new string[] {
+                            "AddressLine2",
+                            ""});
+                table9.AddRow(new string[] {
+                            "Town",
+                            "Some Town"});
+                table9.AddRow(new string[] {
+                            "County",
+                            "Some County"});
+                table9.AddRow(new string[] {
+                            "Country",
+                            "Some Country"});
+                table9.AddRow(new string[] {
+                            "Postcode",
+                            "A1 1AA"});
+#line 9
+  testRunner.Given("The following customer is added to the repository:", ((string)(null)), table9, "Given ");
+#line hidden
+#line 19
+  testRunner.Then("1 customer will be added to the database context", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
@@ -149,41 +182,8 @@ this.ScenarioInitialize(scenarioInfo);
                 table10.AddRow(new string[] {
                             "Postcode",
                             "A1 1AA"});
-#line 9
-  testRunner.Given("The following customer is added to the repository:", ((string)(null)), table10, "Given ");
-#line hidden
-#line 19
-  testRunner.Then("1 customer will be added to the database context", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Field",
-                            "Value"});
-                table11.AddRow(new string[] {
-                            "CustomerRef",
-                            "69141d84-f724-4350-b508-8530f54faf42"});
-                table11.AddRow(new string[] {
-                            "CustomerName",
-                            "Major Tom"});
-                table11.AddRow(new string[] {
-                            "AddressLine1",
-                            "Ground Control"});
-                table11.AddRow(new string[] {
-                            "AddressLine2",
-                            ""});
-                table11.AddRow(new string[] {
-                            "Town",
-                            "Some Town"});
-                table11.AddRow(new string[] {
-                            "County",
-                            "Some County"});
-                table11.AddRow(new string[] {
-                            "Country",
-                            "Some Country"});
-                table11.AddRow(new string[] {
-                            "Postcode",
-                            "A1 1AA"});
 #line 20
-  testRunner.And("The following customer will be added to the database context:", ((string)(null)), table11, "And ");
+  testRunner.And("The following customer will be added to the database context:", ((string)(null)), table10, "And ");
 #line hidden
 #line 30
   testRunner.And("The changes are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -263,6 +263,39 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table11.AddRow(new string[] {
+                            "CustomerRef",
+                            "ede208e7-a176-4c5d-ac7f-b41473048a1e"});
+                table11.AddRow(new string[] {
+                            "CustomerName",
+                            "Name 3"});
+                table11.AddRow(new string[] {
+                            "AddressLine1",
+                            "AddressLine1 3"});
+                table11.AddRow(new string[] {
+                            "AddressLine2",
+                            "AddressLine2 3"});
+                table11.AddRow(new string[] {
+                            "Town",
+                            "Some Town 3"});
+                table11.AddRow(new string[] {
+                            "County",
+                            "Some County 3"});
+                table11.AddRow(new string[] {
+                            "Country",
+                            "Some Country 3"});
+                table11.AddRow(new string[] {
+                            "Postcode",
+                            "A1 1AA 3"});
+#line 40
+  testRunner.Given("The following customer exists in the database:", ((string)(null)), table11, "Given ");
+#line hidden
+#line 50
+  testRunner.And("A customer with customerRef {ede208e7-a176-4c5d-ac7f-b41473048a1e} is requested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
                 TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
@@ -290,41 +323,8 @@ this.ScenarioInitialize(scenarioInfo);
                 table12.AddRow(new string[] {
                             "Postcode",
                             "A1 1AA 3"});
-#line 40
-  testRunner.Given("The following customer exists in the database:", ((string)(null)), table12, "Given ");
-#line hidden
-#line 50
-  testRunner.When("A customer with customerRef {ede208e7-a176-4c5d-ac7f-b41473048a1e} is requested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Field",
-                            "Value"});
-                table13.AddRow(new string[] {
-                            "CustomerRef",
-                            "ede208e7-a176-4c5d-ac7f-b41473048a1e"});
-                table13.AddRow(new string[] {
-                            "CustomerName",
-                            "Name 3"});
-                table13.AddRow(new string[] {
-                            "AddressLine1",
-                            "AddressLine1 3"});
-                table13.AddRow(new string[] {
-                            "AddressLine2",
-                            "AddressLine2 3"});
-                table13.AddRow(new string[] {
-                            "Town",
-                            "Some Town 3"});
-                table13.AddRow(new string[] {
-                            "County",
-                            "Some County 3"});
-                table13.AddRow(new string[] {
-                            "Country",
-                            "Some Country 3"});
-                table13.AddRow(new string[] {
-                            "Postcode",
-                            "A1 1AA 3"});
 #line 51
-  testRunner.Then("The following customer is returned:", ((string)(null)), table13, "Then ");
+  testRunner.Then("The following customer is returned:", ((string)(null)), table12, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -358,38 +358,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "CustomerRef",
                             "ede208e7-a176-4c5d-ac7f-b41473048a1e"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "CustomerName",
                             "Name 3"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "AddressLine1",
                             "AddressLine1 3"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "AddressLine2",
                             "AddressLine2 3"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Town",
                             "Some Town 3"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "County",
                             "Some County 3"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Country",
                             "Some Country 3"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Postcode",
                             "A1 1AA 3"});
 #line 63
-  testRunner.Given("The following customer exists in the database:", ((string)(null)), table14, "Given ");
+  testRunner.Given("The following customer exists in the database:", ((string)(null)), table13, "Given ");
 #line hidden
 #line 73
-  testRunner.When("A customer with customerRef {3f24b829-1f04-4c36-b2b2-cbcbeb351d69} is requested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("A customer with customerRef {3f24b829-1f04-4c36-b2b2-cbcbeb351d69} is requested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 74
   testRunner.Then("A null is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -430,7 +430,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.Given("A cancellation token is passed when retrieving a customer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 78
-  testRunner.When("A customer is requested from the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("A customer is requested from the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 79
   testRunner.Then("The cancellation token is passed to FindAsync", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
