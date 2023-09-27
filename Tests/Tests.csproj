@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\API\API.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\DataUploader\DataUploader.csproj" />
   </ItemGroup>
 
   <ItemGroup>
