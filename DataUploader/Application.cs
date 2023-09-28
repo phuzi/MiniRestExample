@@ -24,9 +24,12 @@ public class Application
     {
         _logger.LogInformation("{appName} running.", nameof(Application));
 
-        var filename = "";
+        if (args.Length == 0)
+        {
+            _logger.LogError("No file specified");
+        }
 
-        var customers = _customerCsvReader.Load(filename);
+        var customers = _customerCsvReader.Load(args[0]);
 
         await foreach (var customer in customers)
         {
