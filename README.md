@@ -60,3 +60,6 @@ Data types for the CSV fields are assumed to be strings with the excpetion of th
 All fields except Address Line 2 will be required
 
 Customer data will not be normalised and addresses will be stored alongside their name and customer ref.
+
+## Time Constraints
+Unfortunately due to having to do this over a few evenings, around family life and other commitments, I was unable to fully realise a BDD approach and felt I had to "just get it done".
